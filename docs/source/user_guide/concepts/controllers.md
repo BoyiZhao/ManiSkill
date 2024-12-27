@@ -2,7 +2,7 @@
 
 Controllers are interfaces between users/policies and robots. Whenever you take a step in an environment and provide an action, that action is sent to a chosen controller that converts actions to control signals to the robot. At the lowest level, all robots in simulation are controlled via joint position or joint velocity controls, effectively specifying where / how fast each joint should go.
 
-For example, the `arm_pd_ee_delta_pose` controller takes the relative movement of the end-effector as input, and uses [inverse kinematics](https://en.wikipedia.org/wiki/Inverse_kinematics) to convert input actions to target positions of robot joints. The robot uses a [PD controller](https://en.wikipedia.org/wiki/PID_controller) to drive motors to achieve target joint positions.
+For example, the `arm_pd_ee_delta_pose` controller takes the relative movement of the end-effector as input, and uses [inverse kinematics](https://en.wikipedia.org/wiki/Inverse_kinematics) to convert input actions to target positions of robot joints. The robot uses a [PID controller](https://en.wikipedia.org/wiki/PID_controller) to drive motors to achieve target joint positions.
 
 There are a few key elements to remember about controllers in ManiSkill
 - The controller defines the action space of a task 
